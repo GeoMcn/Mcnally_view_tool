@@ -1,0 +1,22 @@
+<h2>Examples<h2>
+<p id="notice"><%= notice %></p>
+
+<hr>
+
+
+
+<div>
+    <% @examples.each do |example| %>
+      <div>
+        <p><%= example.title %></p>
+        <p><%= example.body %></p>
+        <p><%= link_to 'Show', example %></p>
+        <p><%= link_to 'Edit', edit_example_path(example) %></p>
+        <p><%= link_to 'Delete', example, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      </div>
+    <% end %>
+</div>
+
+<br>
+
+<%= link_to 'Create a New Example', new_example_path %>
